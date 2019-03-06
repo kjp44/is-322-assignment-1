@@ -1,15 +1,13 @@
 var slideIndex = 0;
-var slides = document.getElementsByClassName("carousel-item");
+var slides = document.getElementsByClassName("carousel-slide");
 showSlides();
 
 function showSlides() {
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].className = "carousel-item";
-  }
-  slides[slideIndex].className += " active";
+  slides[slideIndex].className = "carousel-slide";
   slideIndex++;
   if (slideIndex > slides.length - 1){
     slideIndex = 0;
   }
-  setTimeout(showSlides, 4000);
+  slides[slideIndex].className += " active";
+  setTimeout(showSlides, 2000);
 }
