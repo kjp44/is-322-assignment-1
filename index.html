@@ -29,10 +29,10 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/products.html">Products</a>
+            <a class="nav-link" href="products.html" onclick=>Products</a>
           </li>
         </ul>
       </div>
@@ -46,6 +46,11 @@
       <div class="col-lg-12">
 
         <div class="carousel my-4">
+          <ol class="carousel-indicators">
+            <li class="carousel-indicator active" onclick="setCurrentSlide(0)"></li>
+            <li class="carousel-indicator" onclick="setCurrentSlide(1)"></li>
+            <li class="carousel-indicator" onclick="setCurrentSlide(2)"></li>
+          </ol>
           <div class="carousel-inner">
             <div class="carousel-slide active">
               <img class="img-fluid" src="images/tennis1.jpg" alt="First slide">
@@ -57,7 +62,12 @@
               <img class="img-fluid" src="images/tennis3.jpg" alt="Third slide">
             </div>
           </div>
-
+          <a class="carousel-control-prev" onclick="prevSlide()">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" onclick="nextSlide()">
+            <span class="carousel-control-next-icon"></span>
+          </a>
         </div>
 
       </div>
