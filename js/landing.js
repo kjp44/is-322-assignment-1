@@ -1,7 +1,16 @@
-var slideIndex = 0;
-var slides = document.getElementsByClassName("carousel-slide");
-var indicators = document.getElementsByClassName("carousel-indicator");
+let slideIndex = 0;
+let slides = document.getElementsByClassName("carousel-slide");
+let indicators = document.getElementsByClassName("carousel-indicator");
 let interval = setInterval(showSlide, 4000);
+
+function myFunction() {
+  var mainNav = document.getElementById("myMainNav");
+  if (mainNav.className === "main-nav") {
+    mainNav.className += " responsive";
+  } else {
+    mainNav.className = "main-nav";
+  }
+}
 
 function nextSlide(){
 	resetSlideClass();
@@ -35,7 +44,7 @@ function showSlide() {
 
 function resetSlideClass(){
 	slides[slideIndex].className = "carousel-slide"
-	indicators[slideIndex].className = 'carousel-indicator'
+	indicators[slideIndex].className = "carousel-indicator";
 }
 
 function resetSlideIndex(){
