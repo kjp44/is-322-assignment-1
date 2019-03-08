@@ -4,9 +4,10 @@ const priceDropdown = document
   .querySelector(".price-dropdown")
   .addEventListener("change", determineOptionAction);
 
-const sortLowestToHighest = arr => {
+const sortLowestToHighest = (arr, type) => {
   return arr.sort((a, b) => {
-    return a.price - b.price;
+    if (type === "price") return a.price - b.price;
+    return a.weight - b.weight;
   });
 };
 
@@ -29,7 +30,7 @@ const renderProducts = arr => {
             <div class="justify-content-center">
                 <div class="text-center p-4">Brand: ${item.brand}</div>
                 <div class="text-center">Price: $${item.price}</div>
-                <div class="text-center p-4">Weight: ${item.weight}</div>
+                <div class="text-center p-4">Weight: ${item.weight} grams</div>
                 <div class="text-center pb-4">Grip Size: ${item.gripSize}</div>
                 <div class="text-center">Color: ${item.color}</div>
                 <div class="justify-content-center align-items-center">
@@ -48,13 +49,16 @@ function determineOptionAction() {
   const selected = this.value;
   let result = [];
   switch (selected) {
-    case "lowest to highest":
-      result = sortLowestToHighest(tennisItemArray);
+    case "sort by lowest price":
+      result = sortLowestToHighest(tennisItemArray, "price");
       break;
-    case "lower than 200":
+    case "sort by lowest weight":
+      result = sortLowestToHighest(tennisItemArray, "weight");
+      break;
+    case "price lower than 200":
       result = filterBy(tennisItemArray, 200, true);
       break;
-    case "higher than 200":
+    case "price higher than 200":
       result = filterBy(tennisItemArray, 200);
       break;
     default:

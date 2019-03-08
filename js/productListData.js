@@ -2,7 +2,7 @@ const tennisItemArray = [
   {
     brand: "Head",
     price: 215,
-    weight: "205 grams",
+    weight: 205,
     gripSize: "3",
     color: "white/black",
     url: "./images/speed.jpg"
@@ -10,7 +10,7 @@ const tennisItemArray = [
   {
     brand: "Wilson",
     price: 220,
-    weight: "180 grams",
+    weight: 180,
     gripSize: "2",
     color: "black/green",
     url: "./images/blade.jpg"
@@ -18,7 +18,7 @@ const tennisItemArray = [
   {
     brand: "Prince",
     price: 150,
-    weight: "160 grams",
+    weight: 160,
     gripSize: "2",
     color: "blue/black",
     url: "./images/prince.jpg"
@@ -26,7 +26,7 @@ const tennisItemArray = [
   {
     brand: "Yonex",
     price: 190,
-    weight: "215 grams",
+    weight: 215,
     gripSize: "3.5",
     color: "red/black",
     url: "./images/yonex.jpg"
@@ -34,7 +34,7 @@ const tennisItemArray = [
   {
     brand: "Head",
     price: 240,
-    weight: "220 grams",
+    weight: 220,
     gripSize: "4",
     color: "orange/white",
     url: "./images/radical.jpg"
@@ -42,7 +42,7 @@ const tennisItemArray = [
   {
     brand: "Wilson",
     price: 225,
-    weight: "215 grams",
+    weight: 215,
     gripSize: "3",
     color: "black/orange",
     url: "./images/proStaff.jpg"
@@ -50,7 +50,7 @@ const tennisItemArray = [
   {
     brand: "Dunlop",
     price: 170,
-    weight: "180 grams",
+    weight: 180,
     gripSize: "2",
     color: "red/black",
     url: "./images/biomimetic.jpg"
@@ -58,7 +58,7 @@ const tennisItemArray = [
   {
     brand: "Dunlop",
     price: 205,
-    weight: "210 grams",
+    weight: 210,
     gripSize: "2",
     color: "yellow/black",
     url: "./images/apexLite.jpeg"
@@ -66,7 +66,7 @@ const tennisItemArray = [
   {
     brand: "Babolat",
     price: 240,
-    weight: "215 grams",
+    weight: 215,
     gripSize: "4",
     color: "blue/white",
     url: "./images/pureDrive.jpg"
@@ -74,7 +74,7 @@ const tennisItemArray = [
   {
     brand: "Babolat",
     price: 260,
-    weight: "205 grams",
+    weight: 205,
     gripSize: "3",
     color: "yellow/black",
     url: "./images/aeroPro.jpg"
