@@ -1,7 +1,7 @@
 const tennisItemArray = [
   {
     brand: "Head",
-    price: "$200",
+    price: 215,
     weight: "205 grams",
     gripSize: "3",
     color: "white/black",
@@ -9,7 +9,7 @@ const tennisItemArray = [
   },
   {
     brand: "Wilson",
-    price: "$220",
+    price: 220,
     weight: "180 grams",
     gripSize: "2",
     color: "black/green",
@@ -17,7 +17,7 @@ const tennisItemArray = [
   },
   {
     brand: "Prince",
-    price: "$150",
+    price: 150,
     weight: "160 grams",
     gripSize: "2",
     color: "blue/black",
@@ -25,7 +25,7 @@ const tennisItemArray = [
   },
   {
     brand: "Yonex",
-    price: "$190",
+    price: 190,
     weight: "215 grams",
     gripSize: "3.5",
     color: "red/black",
@@ -33,7 +33,7 @@ const tennisItemArray = [
   },
   {
     brand: "Head",
-    price: "$240",
+    price: 240,
     weight: "220 grams",
     gripSize: "4",
     color: "orange/white",
@@ -41,7 +41,7 @@ const tennisItemArray = [
   },
   {
     brand: "Wilson",
-    price: "$225",
+    price: 225,
     weight: "215 grams",
     gripSize: "3",
     color: "black/orange",
@@ -49,7 +49,7 @@ const tennisItemArray = [
   },
   {
     brand: "Dunlop",
-    price: "$170",
+    price: 170,
     weight: "180 grams",
     gripSize: "2",
     color: "red/black",
@@ -57,7 +57,7 @@ const tennisItemArray = [
   },
   {
     brand: "Dunlop",
-    price: "$205",
+    price: 205,
     weight: "210 grams",
     gripSize: "2",
     color: "yellow/black",
@@ -65,7 +65,7 @@ const tennisItemArray = [
   },
   {
     brand: "Babolat",
-    price: "$240",
+    price: 240,
     weight: "215 grams",
     gripSize: "4",
     color: "blue/white",
@@ -73,7 +73,7 @@ const tennisItemArray = [
   },
   {
     brand: "Babolat",
-    price: "$260",
+    price: 260,
     weight: "205 grams",
     gripSize: "3",
     color: "yellow/black",
