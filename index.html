@@ -14,38 +14,38 @@
 
   <link href="css/homepage.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <script src="landing.js"></script>
 
 </head>
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Tennis Time</a>
-      <button class="navbar-toggler" type="button">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/products.html">Products</a>
-          </li>
-        </ul>
+  <nav class="fixed-top">
+    <div class="main-nav" id="myMainNav">
+      <div class="container">
+      <a class="title" href="index.html">Tennis Time</a>
+      <a href="javascript:void(0);" class="icon" onclick="expandMainNav()">
+        <i class="fa fa-bars"></i>
+      </a>
+      <a class="navitem active" href="index.html">Home</a>
+      <a class="navitem" href="products.html">Products</a>
       </div>
-    </div>
   </nav>
 
   <div class="container">
 
     <div class="row">
 
-      <div class="col-lg-12">
+      <div class="col-xl-12">
 
         <div class="carousel my-4">
+          <ol class="carousel-indicators">
+            <li class="carousel-indicator active" onclick="setCurrentSlide(0)"></li>
+            <li class="carousel-indicator" onclick="setCurrentSlide(1)"></li>
+            <li class="carousel-indicator" onclick="setCurrentSlide(2)"></li>
+          </ol>
           <div class="carousel-inner">
             <div class="carousel-slide active">
               <img class="img-fluid" src="images/tennis1.jpg" alt="First slide">
@@ -57,7 +57,12 @@
               <img class="img-fluid" src="images/tennis3.jpg" alt="Third slide">
             </div>
           </div>
-
+          <a class="carousel-control-prev" onclick="prevSlide()">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" onclick="nextSlide()">
+            <span class="carousel-control-next-icon"></span>
+          </a>
         </div>
 
       </div>
@@ -66,7 +71,7 @@
 
     <div class="row">
 
-      <div class="col-lg-12">
+      <div class="col-xl-12">
         <h1>About Tennis Time</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et tellus et odio euismod ornare ac a velit. Fusce efficitur tortor et scelerisque porta. Vestibulum dignissim nibh sit amet quam egestas, eu pulvinar mi imperdiet. Sed eget arcu vel ipsum feugiat congue eget ut urna. Aenean mollis dui scelerisque rutrum lobortis. Proin ac ultrices neque, quis tempus nibh. Vivamus diam ex, efficitur in luctus tristique, tincidunt cursus est. Praesent dictum ex nec elit aliquam, id blandit nibh maximus. Pellentesque ut ipsum dapibus, vulputate est in, tincidunt metus. Curabitur eget lectus sollicitudin, pharetra diam vitae, ullamcorper ligula.
@@ -89,14 +94,15 @@
 
   </div>
 
-  <footer class="py-5 bg-dark">
+  <footer class="py-5">
     <div class="container">
-      <p class="m-0 text-center text-white">&copy; 2019 Tennis Time, LLC.</p>
-      <p class="m-0 text-center text-white">
+      <p class="footer m-0 text-center text-white">
+        <span>&copy; 2019 Tennis Time, LLC.</span>
+        <span class="spacer"> | </span>
         <span>973-867-5309</span>
-        <span> | </span>
+        <span class="spacer"> | </span>
         <span>221B Baker Street, London NW1 6XE, England</span>
-        <span> | </span>
+        <span class="spacer"> | </span>
         <a href="https://www.facebook.com/" target="blank">
           <img src="images/facebook_logo.png"` width="20" height="20">
         </a>
