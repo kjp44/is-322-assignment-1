@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Tennis Time</title>
+
+    <link href="css/bootstrap/css/bootstrap.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="d-flex justify-content-center align-items-center flex-column m-4 row">
+      <div class="m-2">Filter by price</div>
+      <select class="price-dropdown">
+        <option value="-">-</option>
+        <option value="lowest to highest">lowest to highest</option>
+        <option value="lower than 200">lower than 200</option>
+        <option value="higher than 200">higher than 200</option>
+      </select>
+    </div>
+    <div class="product-list row"></div>
+    <script src="./js/productListData.js"></script>
+    <script src="./js/productList.js"></script>
+  </body>
+</html>
