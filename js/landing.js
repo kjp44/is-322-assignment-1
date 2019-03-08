@@ -1,56 +1,58 @@
 var slideIndex = 0;
 var slides = document.getElementsByClassName("carousel-slide");
 var indicators = document.getElementsByClassName("carousel-indicator");
-let interval = setInterval(showSlides, 4000);
+let interval = setInterval(showSlide, 4000);
 
 function nextSlide(){
-	slides[slideIndex].className = "carousel-slide";
-	indicators[slideIndex].className = "carousel-indicator";
+	resetSlideClass();
 	slideIndex++;
-	if (slideIndex > slides.length - 1){
-		slideIndex = 0;
-	}
-	slides[slideIndex].className += " active";
-	indicators[slideIndex].className += " active";
-	clearInterval(interval);
-	interval = setInterval(showSlides, 4000);
+	resetSlideIndex();
+	setSlideClassActive();
+	resetInterval()
 }
 
 function prevSlide(){
-	slides[slideIndex].className = "carousel-slide";
-	indicators[slideIndex].className = "carousel-indicator";
+	resetSlideClass();
 	slideIndex--;
-	if (slideIndex < 0){
-		slideIndex = slides.length - 1;
-	}
-	slides[slideIndex].className += " active";
-	indicators[slideIndex].className += " active";
-	clearInterval(interval);
-	interval = setInterval(showSlides, 4000);
+	resetSlideIndex();
+	setSlideClassActive();
+	resetInterval()
 }
 
 function setCurrentSlide(slide){
+	resetSlideClass();
 	slideIndex = slide;
-	for(var i = 0; i < slides.length; i++){
-		slides[i].className = "carousel-slide"
-		indicators[i].className = 'carousel-indicator'
-	}
-	slides[slideIndex].className += " active";
-	indicators[slideIndex].className += " active"
-	clearInterval(interval);
-	interval = setInterval(showSlides, 4000);
+	setSlideClassActive();
+	resetInterval()
 }
 
-function showSlides() {
-  	console.log(slideIndex)
+function showSlide() {
+	resetSlideClass();
   	slideIndex++;
-  	for(var i = 0; i < slides.length; i++){
-		slides[i].className = "carousel-slide"
-		indicators[i].className = 'carousel-indicator'
-	}
+  	resetSlideIndex()
+  	setSlideClassActive();
+}
+
+function resetSlideClass(){
+	slides[slideIndex].className = "carousel-slide"
+	indicators[slideIndex].className = 'carousel-indicator'
+}
+
+function resetSlideIndex(){
 	if (slideIndex > slides.length - 1){
 		slideIndex = 0;
+	} else if (slideIndex < 0){
+		slideIndex = slides.length - 1;
 	}
-  	slides[slideIndex].className += " active";
-  	indicators[slideIndex].className += " active"
+}
+
+function setSlideClassActive(){
+	slides[slideIndex].className += " active";
+	indicators[slideIndex].className += " active";
+
+}
+
+function resetInterval(){
+	clearInterval(interval);
+	interval = setInterval(showSlide, 4000);
 }
