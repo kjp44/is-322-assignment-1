@@ -10,11 +10,25 @@
     <title>Tennis Time</title>
 
     <link href="css/bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+    <link href="css/homepage.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <div
-      class="d-flex justify-content-center align-items-center flex-column m-4 row"
-    >
+    <nav class="fixed-top">
+      <div class="main-nav" id="myMainNav">
+        <div class="container">
+        <a class="title" href="index.html">Tennis Time</a>
+        <a href="javascript:void(0);" class="icon" onclick="expandMainNav()">
+          <i class="fa fa-bars"></i>
+        </a>
+        <a class="navitem" href="index.html">Home</a>
+        <a class="navitem active" href="productList.html">Products</a>
+      </div>
+    </nav>
+
+    <div class="d-flex justify-content-center align-items-center flex-column m-4 row">
       <div class="m-2">Filter/Sort</div>
       <select class="price-dropdown">
         <option value="-">-</option>
@@ -24,8 +38,29 @@
         <option value="price higher than 200">price higher than 200</option>
       </select>
     </div>
+    
     <div class="product-list row"></div>
+
+    <footer class="py-5">
+      <div class="container">
+        <p class="footer m-0 text-center text-white">
+          <span>&copy; 2019 Tennis Time, LLC.</span>
+          <span class="spacer"> | </span>
+          <span>973-867-5309</span>
+          <span class="spacer"> | </span>
+          <span>221B Baker Street, London NW1 6XE, England</span>
+          <span class="spacer"> | </span>
+          <a href="https://www.facebook.com/" target="blank">
+            <img src="images/facebook_logo.png"` width="20" height="20">
+          </a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/landing.js"></script>
+
     <script src="./js/productListData.js"></script>
+
     <script src="./js/productList.js"></script>
   </body>
 </html>
