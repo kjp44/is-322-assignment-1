@@ -3,7 +3,7 @@ let slides = document.getElementsByClassName("carousel-slide");
 let indicators = document.getElementsByClassName("carousel-indicator");
 let interval = setInterval(showSlide, 4000);
 
-function myFunction() {
+function expandMainNav() {
   var mainNav = document.getElementById("myMainNav");
   if (mainNav.className === "main-nav") {
     mainNav.className += " responsive";

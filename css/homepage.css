@@ -29,7 +29,7 @@ body {
   color: black;
 }
 
-.active {
+.navitem.active {
   background-color: #4CAF50;
   color: white;
 }
@@ -49,6 +49,13 @@ body {
     float: none;
     display: block;
     text-align: left;
+  }
+  .spacer{
+    display: none;
+  }
+  p.footer{
+    display: flex;
+    flex-direction: column;
   }
 }
 
