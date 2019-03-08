@@ -30,7 +30,7 @@ const renderProducts = arr => {
                 <div class="text-center p-4">Brand: ${item.brand}</div>
                 <div class="text-center">Price: $${item.price}</div>
                 <div class="text-center p-4">Weight: ${item.weight}</div>
-                <div class="text-center">Grip Size: ${item.gripSize}</div>
+                <div class="text-center pb-4">Grip Size: ${item.gripSize}</div>
                 <div class="text-center">Color: ${item.color}</div>
                 <div class="justify-content-center align-items-center">
                 <img class="p-4" src=${
